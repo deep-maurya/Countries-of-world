@@ -83,7 +83,7 @@ const send_otp = async (req, res, next) => {
       if (send_email.status === 1) {
         let token = create_token({ ...req.userData, otp_id: otp_data.otp_id });
         res.cookie("reg_token", token, {
-          httpOnly: true,
+          httpOnly: false,
           secure: false,
           sameSite: "Lax",
           maxAge: 5 * 60 * 1000,
@@ -165,9 +165,9 @@ const validate_user = async (req, res, next) => {
         .json({ status: 0, message: "Incorrect password." });
     }
 
-    const token = create_token({ u_id: user._id });
+    const token = create_token({ u_id: user._id, },'300m');
     res.cookie("auth_token", token, {
-      httpOnly: true,
+      httpOnly: false,
       secure: false,
       sameSite: "Lax",
       maxAge: 3600000,
@@ -250,7 +250,7 @@ const verify_password_link = async(req,res) => {
     //console.log(data)
     if(data.status===1){
         res.cookie("fprl_token", token, {
-            httpOnly: true,
+            httpOnly: false,
             secure: false,
             sameSite: "Lax",
         });
