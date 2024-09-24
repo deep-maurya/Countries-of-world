@@ -52,7 +52,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <Link to={'/'}>
-            <img src={logo} style={{ width: "80px" }} alt="Buildhub" />
+            <img src={logo} style={{ width: "50px" }} alt="Buildhub" />
           </Link>
         </div>
         <div className="hidden grow items-start lg:flex">
@@ -103,7 +103,7 @@ export function Navbar() {
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2">
                     <Link to={'/'}>
-                      <img src={logo} style={{ width: "80px" }} alt="Buildhub" />
+                      <img src={logo} style={{ width: "50px" }} alt="Buildhub" />
                     </Link>
                   </div>
                   <div className="-mr-2">
