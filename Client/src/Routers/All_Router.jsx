@@ -15,10 +15,10 @@ export const All_Router = () => {
     <Routes>
       <Route path='/login' element={<LoginPage />} />
       <Route path='/register' element={<RegisterPage />} />
-      <Route path='/' element={<PrivateRoute><HomePage /></PrivateRoute>} />
+      <Route path='/' element={<HomePage />} />
       <Route path='/forget_password' element={<ForgetPasswordPage />} />
       <Route path='/forget_password/:token' element={<ForgetPasswordPage />} />
-      <Route path='/*' element={<PageNotFoundPage />} />
+      <Route path='*' element={<PageNotFoundPage />} />
     </Routes>
    
   );

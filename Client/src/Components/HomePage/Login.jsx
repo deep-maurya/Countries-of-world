@@ -20,7 +20,7 @@ export const Login = () => {
 
     useEffect(() => {
         if (authStatus) {
-            navigate('/dashboard');
+            navigate('/');
         }
     }, [authStatus, navigate]);
 
@@ -29,7 +29,7 @@ export const Login = () => {
         e.preventDefault();
         set_disable(true);
         let endpoint = 'user/login';
-        let redirect = 'dashboard';
+        let redirect = '';
 
         try {
             const response = await AxioPost(endpoint, { email, password });
